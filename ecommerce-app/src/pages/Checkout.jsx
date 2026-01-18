@@ -36,8 +36,9 @@ export default function Checkout()
       <h3 className="mb-4">Checkout</h3>
 
       <div className="row">
-        {/* Order Summary */}
+
         <div className="col-md-8">
+
           <h5 className="mb-3">Order Summary</h5>
 
           {cartItems.map((item) => (
@@ -61,7 +62,6 @@ export default function Checkout()
 
         </div>
 
-        {/* Price Box */}
         <div className="col-md-4">
           <div className="border rounded p-3">
             <h5>Total</h5>
