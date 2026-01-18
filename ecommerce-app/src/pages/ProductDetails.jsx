@@ -3,11 +3,14 @@ import { useParams } from "react-router-dom";
 import { fetchSingleProduct } from "../services/api";
 import { CartContext } from "../context/CartContext";
 
-function ProductDetails() {
+export default function ProductDetails() {
+
   const { id } = useParams();
+
   const { addToCart } = useContext(CartContext);
 
   const [product, setProduct] = useState(null);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -42,10 +45,12 @@ function ProductDetails() {
   }
 
   return (
+
     <div className="container mt-4">
+
       <div className="row">
 
-        {/* Product Image */}
+        
         <div className="col-md-6 mb-4">
           <img
             src={product.images?.[0]}
@@ -53,10 +58,13 @@ function ProductDetails() {
             className="img-fluid rounded border"
             style={{ maxHeight: "400px", objectFit: "cover" }}
           />
+
         </div>
 
-        {/* Product Details */}
+
+
         <div className="col-md-6">
+
           <h3 className="mb-3">{product.title}</h3>
 
           <h4 className="text-success mb-3">
@@ -77,7 +85,9 @@ function ProductDetails() {
 
       </div>
     </div>
-  );
+
+  
+  
+);
 }
 
-export default ProductDetails;

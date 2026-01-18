@@ -3,12 +3,16 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { AuthContext } from "../context/AuthContext";
 
-function Navbar() {
+export default function Navbar() {
+
   const { cartItems } = useContext(CartContext);
+
   const { user, logout } = useContext(AuthContext);
 
   return (
+
     <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+
       <div className="container">
 
         
@@ -17,6 +21,7 @@ function Navbar() {
         </Link>
 
         <div className="collapse navbar-collapse show">
+
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
             <li className="nav-item">
               <Link className="nav-link" to="/">All</Link>
@@ -65,7 +70,9 @@ function Navbar() {
             <Link className="nav-link fw-semibold" to="/cart">
               🛒 {cartItems.length}
             </Link>
+
           </div>
+
         </div>
 
       </div>
@@ -73,4 +80,3 @@ function Navbar() {
   );
 }
 
-export default Navbar;

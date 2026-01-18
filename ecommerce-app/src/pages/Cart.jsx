@@ -3,24 +3,34 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 
-function Cart() {
+export default function Cart() 
+{
+
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
 
   const total = cartItems.reduce(
+
     (sum, item) => sum + item.price * item.quantity,
     0
+
   );
 
   if (cartItems.length === 0) {
+
     return (
+
       <div className="container mt-4">
         <h4>Your cart is empty</h4>
       </div>
     );
+
   }
 
+
   return (
+
     <div className="container mt-4">
+
       <h4 className="mb-4">Your Cart</h4>
 
       {cartItems.map((item) => (
@@ -41,10 +51,13 @@ function Cart() {
           >
             Remove
           </button>
+
         </div>
+
       ))}
 
       <div className="mt-4">
+
         <h5>Total: $ {total}</h5>
         <Link to="/checkout" className="btn btn-success mt-3">
           Proceed to Checkout
@@ -54,8 +67,10 @@ function Cart() {
           Clear Cart
         </button>
       </div>
+      
     </div>
+
+
   );
 }
 
-export default Cart;

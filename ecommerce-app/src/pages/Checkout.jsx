@@ -2,13 +2,17 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 
-function Checkout() {
+export default function Checkout()
+ {
+
   const { cartItems, clearCart } = useContext(CartContext);
+  
   const navigate = useNavigate();
 
   const totalAmount = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
+
   );
 
   const placeOrder = () => {
@@ -23,10 +27,12 @@ function Checkout() {
         <h4>No items to checkout</h4>
       </div>
     );
-  }
+   }
 
   return (
+
     <div className="container mt-4">
+
       <h3 className="mb-4">Checkout</h3>
 
       <div className="row">
@@ -50,7 +56,9 @@ function Checkout() {
                 ₹ {item.price * item.quantity}
               </div>
             </div>
+
           ))}
+
         </div>
 
         {/* Price Box */}
@@ -70,8 +78,9 @@ function Checkout() {
           </div>
         </div>
       </div>
+      
     </div>
+
   );
 }
 
-export default Checkout;

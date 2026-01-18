@@ -7,15 +7,25 @@ import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
+
     <BrowserRouter>
-      <AuthProvider>
-        <CartProvider>
-          <Navbar />
-          <AppRoutes />
-          <Footer />
+
+        <AuthProvider>
+
+          <CartProvider>
+
+            <Navbar />
+
+              <AppRoutes />
+
+            <Footer />
+
         </CartProvider>
+
       </AuthProvider>
+      
     </BrowserRouter>
+
   );
 }
 
