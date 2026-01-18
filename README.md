@@ -7,9 +7,9 @@ The project shows product listing, product details, cart, and checkout flow.
 
 ## Live Demo
 
-Live App: [https://YOUR-NETLIFY-LINK.netlify.app](https://ecommerce-wapp.netlify.app/)  
+Live App:https://ecommerce-wapp.netlify.app/  
 
-GitHub Repo:[ https://github.com/YOUR-USERNAME/YOUR-REPO-NAME](https://github.com/sudarshan-kanase/Ecommerce-App-Task)
+GitHub Repo:https://github.com/sudarshan-kanase/Ecommerce-App-Task
 
 ---
 
@@ -47,7 +47,7 @@ https://api.escuelajs.co/api/v1/products
 
 1. Clone the repository  
    ```bash
-   git clone [https://github.com/YOUR-USERNAME/YOUR-REPO-NAME](https://github.com/sudarshan-kanase/Ecommerce-App-Task)
+   git clone https://github.com/sudarshan-kanase/Ecommerce-App-Task
 2. Go to project folder
    cd ecommerce-app
 3. Install dependencies
